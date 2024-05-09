@@ -20,7 +20,7 @@ function calcularIngredientes() {
     let DineroGanado = CostoTotal * porcentaje;
     let Ganancia = CostoTotal + DineroGanado;
     // Mostrar los resultados
-    document.getElementById("cantidadMostrada").textContent = cantidadJabon;
+    document.getElementById("cantidadMostrada").textContent = cantidadJabon.toFixed(2);
     document.getElementById("sosaCáustica").textContent = sosaCáusticaGramos.toFixed(2);
     document.getElementById("agua").textContent = agua.toFixed(2);
     document.getElementById("aceiteCoco").textContent = aceiteCoco.toFixed(2);
@@ -53,7 +53,7 @@ function calcularAceite(){
     let DineroGanado = CostoTotal * porcentaje;
     let Ganancia = CostoTotal + DineroGanado;
     // Mostrar los resultados
-    document.getElementById("cantidadMostrada").textContent = cantidadJabon;
+    document.getElementById("cantidadMostrada").textContent = cantidadJabon.toFixed(2);
     document.getElementById("sosaCáustica").textContent = sosaCáusticaGramos.toFixed(2);
     document.getElementById("agua").textContent = agua.toFixed(2);
     document.getElementById("aceiteCoco").textContent = aceiteCoco.toFixed(2);
@@ -85,7 +85,7 @@ function calcularSosa(){
     let DineroGanado = CostoTotal * porcentaje;
     let Ganancia = CostoTotal + DineroGanado;
     // Mostrar los resultados
-    document.getElementById("cantidadMostrada").textContent = cantidadJabon;
+    document.getElementById("cantidadMostrada").textContent = cantidadJabon.toFixed(2);
     document.getElementById("sosaCáustica").textContent = sosaCáusticaGramos.toFixed(2);
     document.getElementById("agua").textContent = agua.toFixed(2);
     document.getElementById("aceiteCoco").textContent = aceiteCoco.toFixed(2);
