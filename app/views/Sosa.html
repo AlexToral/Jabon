@@ -15,6 +15,9 @@
         <ul>
             <li><button href="#modalSosa" data-toggle="modal">Sosa Caustica</button></li>
             <li><button href="#modalAceite" data-toggle="modal">Aceite de Coco</button></li>
+            <li><button onclick="window.location.href='Sosa.html'">Calculadora Sosa</button></li>
+            <li><button onclick="window.location.href='Index.html'">Calculadora Jabon</button></li>
+            <li><button onclick="window.location.href='Aceite.html'">Calculadora Aceite</button></li>
         </ul>
     </nav>
 
@@ -60,12 +63,13 @@
     
     <main>
         <h1>Calculadora de Ingredientes para Jabón</h1>
+        <h3>Dado que solo te dan Sosa</h3>
         <form id="soapCalculator">
-            <label for="cantidadJabon">Cantidad de Jabón (en gramos):</label>
-            <input type="number" id="cantidadJabon" required>
+            <label for="cantidadSosa">Cantidad de Sosa (en gramos):</label>
+            <input type="number" id="cantidadSosa" required>
             <label for="porcentaje">Cual es el porcentaje que quieres Ganar? (En decimal)</label>
             <input type="number" id="porcentaje" required>
-            <button type="submit" onclick="calcularIngredientes()">Calcular</button>
+            <button type="submit" onclick="calcularSosa()">Calcular</button>
         </form>
     
         <div id="resultados" style="display:none;">
@@ -83,7 +87,7 @@
 
       
     <!-- Optional JavaScript -->
-    <script src="jabonUtils.js"></script>
+    <script src="./../js/jabonUtils.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

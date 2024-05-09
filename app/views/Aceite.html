@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+  <body>
+    <nav>
+        <ul>
+            <li><button href="#modalSosa" data-toggle="modal">Sosa Caustica</button></li>
+            <li><button href="#modalAceite" data-toggle="modal">Aceite de Coco</button></li>
+            <li><button onclick="window.location.href='Sosa.html'">Calculadora Sosa</button></li>
+            <li><button onclick="window.location.href='Index.html'">Calculadora Jabon</button></li>
+            <li><button onclick="window.location.href='Aceite.html'">Calculadora Aceite</button></li>
+        </ul>
+    </nav>
+
+    <!-- Modal Sosa Caustica-->
+    <div id="modalSosa" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="SosaTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Puntos de Venta de Sosa Cáustica</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Te recomendamos visitar los siguientes enlaces:</p>
+                    <ul>
+                        <li><a target="_blank" href="https://www.amazon.com.mx/Vitraquim-Sosa-Caustica-escamas-kilos/dp/B0CQ435QKT/ref=sr_1_1?crid=1DF2W7IG8XKNZ&dib=eyJ2IjoiMSJ9.SYhrpRDr67YcBJFRcKPggqpsYflTllhvvPIS3BqbOes-KVjYjnboEglImnDsaf822us5f7hH_O0MzptgstDJjJwBK0cxZdWnzWefduJcED0Jk5u9Pd3UdBxrcp1FZyXfdfZq63Qw1I9Q6XrOfnNaaTHXXE3pIuO5YfbP5f7oiAsf1eCgJFcl6ug_ZFc0-jPJkEv4AQt51ASC4T6bW3RV2A.VuHnNJSiarPYTj78xSgc-xDN7hJGDVOdvlfLjOuXA_U&dib_tag=se&keywords=sosa%2Bcaustica&qid=1715270199&sprefix=Sosa%2B%2Caps%2C165&sr=8-1&ufe=app_do%3Aamzn1.fos.242f5c11-6cfd-40d6-91f6-be3d1974080c&th=1">Amazon</a></li>
+                        <li><a target="_blank" href="https://www.sodimac.com.mx/sodimac-mx/product/312711/sosa-caustica-en-escamas-1-kg/312711/">Sodimac</a></li>
+                        <li><a target="_blank" href="https://www.gardenianaturals.com.mx/">GardeniaNaturals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aceite de Coco-->
+
+    <div id="modalAceite" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="CocoTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Puntos de Venta de Aceite de Coco</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Te recomendamos visitar los siguientes enlaces:</p>
+                    <ul>
+                        <li><a target="_blank" href="https://www.costco.com.mx/Grocery/Grocery/Kirkland-Signature/Kirkland-Signature-Aceite-De-Coco-Organico-Virgen-229-Kg/p/1045706">Aceite de Coco</a></li>
+                        <li><a target="_blank" href="https://listado.mercadolibre.com.mx/aceite-de-coco">Mercado Libre</a></li>
+                        <li><a target="_blank" href="https://www.amazon.com.mx/aceite-de-coco/s?k=aceite+de+coco">Amazon</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <h1>Calculadora de Ingredientes para Jabón</h1>
+        <h3>Dado que solo te dan Aceite</h3>
+        <form id="oilCalculator">
+            <label for="cantidadAceite">Cantidad de Aceite (en ml):</label>
+            <input type="number" id="cantidadAceite" required>
+            <label for="porcentaje">Cual es el porcentaje que quieres Ganar? (En decimal)</label>
+            <input type="number" id="porcentaje" required>
+            <button type="submit" onclick="calcularAceite()">Calcular</button>
+        </form>
+    
+        <div id="resultados" style="display:none;">
+            <h2>Resultados:</h2>
+            <p>Para hacer <span id="cantidadMostrada"></span> gramos de jabón, necesitas:</p>
+            <ul>
+                <li><strong>Sosa Cáustica:</strong> <span id="sosaCáustica"></span> gramos</li>
+                <li><strong>Agua:</strong> <span id="agua"></span> ml</li>
+                <li><strong>Aceite de Coco:</strong> <span id="aceiteCoco"></span> ml</li>
+                <li><strong>El costo de produccion es de :</strong><span id="costoJabon"></span> mxn</li>
+                <li><strong>Se venderia a: </strong><span id="VentaTotal"></span> mxn Para una ganancia de: <span id="Ganancia"></span> mxn</li>
+            </ul>
+        </div>
+    </main>
+
+      
+    <!-- Optional JavaScript -->
+    <script src="./../js/jabonUtils.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
